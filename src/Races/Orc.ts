@@ -17,16 +17,3 @@ export default class Orc extends Race {
     return Orc._intancesCounter;
   }
 }
-
-// const Jão = new Orc('João da lavora', 20);
-// console.log(Orc._intancesCounter);
-
-// const Otto = new Orc('Otto da lavora', 15);
-// console.log(Orc._intancesCounter);
-
-// console.log('----------------------');
-// console.log(Jão.name);
-// console.log(Jão.maxLifePoints);
-// console.log('----------------------');
-// console.log(Otto.name);
-// console.log(Otto.maxLifePoints);

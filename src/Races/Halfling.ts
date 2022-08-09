@@ -17,16 +17,3 @@ export default class Halfling extends Race {
     return Halfling._intancesCounter;
   }
 }
-
-// const Jão = new Halfling('João da lavora', 20);
-// console.log(Halfling._intancesCounter);
-
-// const Otto = new Halfling('Otto da lavora', 15);
-// console.log(Halfling._intancesCounter);
-
-// console.log('----------------------');
-// console.log(Jão.name);
-// console.log(Jão.maxLifePoints);
-// console.log('----------------------');
-// console.log(Otto.name);
-// console.log(Otto.maxLifePoints);

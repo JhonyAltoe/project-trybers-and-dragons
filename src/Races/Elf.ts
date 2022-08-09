@@ -17,16 +17,3 @@ export default class Elf extends Race {
     return Elf._intancesCounter;
   }
 }
-
-// const Jão = new Elf('João da lavora', 20);
-// console.log(Elf._intancesCounter);
-
-// const Otto = new Elf('Otto da lavora', 15);
-// console.log(Elf._intancesCounter);
-
-// console.log('----------------------');
-// console.log(Jão.name);
-// console.log(Jão.maxLifePoints);
-// console.log('----------------------');
-// console.log(Otto.name);
-// console.log(Otto.maxLifePoints);
