@@ -3,9 +3,6 @@ import Energy from './Energy';
 import Fighter from './Fighter';
 import Race, { Elf } from './Races';
 
-// type GetterParams = 'race' | 'archetype' | 'lifePoints' | 'strength' | 'defense'
-// | 'dexterity' | 'energy';
-
 export default class Character implements Fighter {
   private _race: Race;
   private _archetype: Archetype; 
@@ -15,8 +12,10 @@ export default class Character implements Fighter {
   private _defense: number;
   private _energy: Energy;
   private _dexterity: number;
+  private _name: string;
 
   constructor(name: string) {
+    this._name = name;
     this._dexterity = this.randomNumberBetween(0, 10);
     this._race = new Elf(name, this._dexterity);
     this._archetype = new Mage(name);
@@ -40,6 +39,7 @@ export default class Character implements Fighter {
       ? this.race.maxLifePoints : this._lifePoints;
   };
 
+  get name(): string { return this._name; }
   get race(): Race { return this._race; }
   get archetype(): Archetype { return this._archetype; }
   get lifePoints(): number { return this._lifePoints; }
