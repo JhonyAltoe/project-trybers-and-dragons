@@ -1,6 +1,6 @@
 import Archetype, { Mage } from './Archetypes';
 import Energy from './Energy';
-import Fighter from './Fighter';
+import Fighter, { SimpleFighter } from './Fighter';
 import Race, { Elf } from './Races';
 
 export default class Character implements Fighter {
@@ -58,7 +58,7 @@ export default class Character implements Fighter {
     return this._lifePoints;
   }
 
-  attack(enemy: Fighter): void {
+  attack(enemy: Fighter | SimpleFighter): void {
     enemy.receiveDamage(this.strength);
   }
 
@@ -72,22 +72,7 @@ export default class Character implements Fighter {
     this._energy.amount = 10;
   }
 
-  // special(enemy: Fighter): void {
-  //   throw new Error('Method not implemented.');
+  // special(enemy: Fighter | SimpleFighter): void {
+  //   enemy.receiveDamage(this.strength);
   // }
 }
-
-// const char = new Character('Joao');
-
-// console.log('lifePoints:', char.lifePoints);
-// console.log('energy.amount:', char.energy.amount);
-// console.log('strength:', char.strength);
-// console.log('dexterity:', char.dexterity);
-// console.log('defense:', char.defense);
-// console.log('-----------------------------------');
-// char.levelUp();
-// console.log('lifePoints:', char.lifePoints);
-// console.log('energy.amount:', char.energy.amount);
-// console.log('strength:', char.strength);
-// console.log('dexterity:', char.dexterity);
-// console.log('defense:', char.defense);
