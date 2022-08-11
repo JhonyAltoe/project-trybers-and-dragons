@@ -53,12 +53,14 @@ export default class Character implements Fighter {
 
   receiveDamage(attackPoints: number): number {
     const realDamage = attackPoints - this._defense;
+    console.log(`${this._name} recebeu ${realDamage} de dano!`);
     if (realDamage > 0) this._lifePoints -= realDamage;
     if (this.lifePoints <= 0) this._lifePoints = -1;
     return this._lifePoints;
   }
 
   attack(enemy: Fighter | SimpleFighter): void {
+    console.log(`${this._name} atacou um monstro!`);
     enemy.receiveDamage(this.strength);
   }
 
