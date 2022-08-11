@@ -63,13 +63,15 @@ export default class Character implements Fighter {
   }
 
   levelUp(): void {
-    this._maxLifePoints += this.randomNumberBetween(1, 10);
-    this._lifePoints = this._maxLifePoints;
+    const life = this.randomNumberBetween(1, 10);
+    this._maxLifePoints += life;
+    this._lifePoints += life;
     this.levelUpValidate();
     this._strength += this.randomNumberBetween(1, 10);
     this._dexterity += this.randomNumberBetween(1, 10);
     this._defense += this.randomNumberBetween(1, 10);
     this._energy.amount = 10;
+    console.log('Level UP');
   }
 
   // special(enemy: Fighter | SimpleFighter): void {

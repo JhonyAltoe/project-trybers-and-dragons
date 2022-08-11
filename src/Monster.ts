@@ -5,7 +5,6 @@ export default class Monster implements SimpleFighter {
   private _strength: number;
 
   constructor() {
-    console.log('BLABLABLABLA');
     this._lifePoints = 85;
     this._strength = 63;
   }
